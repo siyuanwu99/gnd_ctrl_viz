@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<launch>
+  <node pkg="ground_viz" type="lidar_mapping" name="lidar_mapping" output="screen">
+    <remap from="/cloud_registered" to="/quad_1/pcl_render_node/cloud" />
+    <param name="map_frame" value="world" />
+    <param name="map_resolution" value="0.1" />
+    <param name="map_frequency" value="2" />
+  </node>
+</launch>
